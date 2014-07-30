@@ -1,0 +1,7 @@
+{
+    "name": "SockJS-chat",
+    "license": "MIT",
+    "require": {
+        "predis/predis": "1.0.*@dev"
+    }
+}
