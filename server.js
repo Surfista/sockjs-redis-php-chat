@@ -21,6 +21,7 @@ var sockjs = require('sockjs'),
         var connName = createConnectionName();
         connections.push({
             name: connName,
+            //user: uid,
             connection: conn
         });
 
@@ -50,7 +51,7 @@ var sockjs = require('sockjs'),
     redis.on('message', function(channel, rawMsgData) {
         for(var conn in connections)
         {
-            connections[conn].write(rawMsgData);
+            connections[conn].connection.write(rawMsgData);
         }
     });
 
